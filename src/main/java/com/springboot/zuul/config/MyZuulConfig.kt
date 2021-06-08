@@ -4,7 +4,7 @@ import com.springboot.zuul.filter.MyZuulFilter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-//@Configuration
+@Configuration
 class MyZuulConfig {
 
     @Bean

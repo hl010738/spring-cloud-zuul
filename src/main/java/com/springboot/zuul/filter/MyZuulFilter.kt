@@ -4,17 +4,16 @@ import com.netflix.zuul.ZuulFilter
 import com.netflix.zuul.context.RequestContext
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants
 
-class MyZuulFilter(): ZuulFilter() {
+class MyZuulFilter: ZuulFilter() {
 
     override fun run(): Any? {
 
         println("Entered MyZuulFilter run Method")
 
-        var requestContext = RequestContext.getCurrentContext()
-        var request = requestContext.request
+        val request = RequestContext.getCurrentContext().request
 
-        var method = request.method
-        var url = request.requestURL.toString()
+        val method = request.method
+        val url = request.requestURL.toString()
 
         println("method: $method, url: $url")
 
